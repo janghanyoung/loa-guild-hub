@@ -1,6 +1,7 @@
 import RaidApplicationCard from "@/components/raid/RaidApplicationCard";
 import RaidClearRecordCard from "@/components/raid/RaidClearRecordCard";
 import RaidGuideCard from "@/components/raid/RaidGuideCard";
+import Link from "next/link";
 import {
   raidApplications,
   raidClearRecords,
@@ -16,6 +17,14 @@ export default function RaidsPage() {
         <p className="mt-3 text-zinc-400">
           레이드 신청 현황, 이번 주 클리어 기록, 레이드별 공략을 확인합니다.
         </p>
+        <div className="mt-5">
+  <Link
+    href="/raids/apply"
+    className="inline-block rounded-xl bg-zinc-100 px-5 py-3 text-sm font-semibold text-zinc-950"
+  >
+    레이드 신청서 작성
+  </Link>
+</div>
       </div>
 
       <div className="mb-12">

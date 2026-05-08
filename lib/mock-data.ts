@@ -1,3 +1,12 @@
+export const raidFormOptions = {
+  raids: ["하드 에기르", "노말 에기르", "노말 카멘", "하드 베히모스"],
+  difficulties: ["Normal", "Hard"],
+  roles: ["딜러", "서폿", "무관"],
+  masteries: ["트라이", "클경", "반숙", "숙련"],
+  times: ["오늘 21:00", "오늘 22:00", "내일 21:00", "주말 조율"],
+};
+
+
 export const raidRecommendations = [
   {
     owner: "파이썬을쓰는자",
