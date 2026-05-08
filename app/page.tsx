@@ -9,41 +9,35 @@ const cards = [
   },
   {
     title: "모험섬 / 이벤트",
-    desc: "오늘의 모험섬과 이벤트 정보를 표시합니다.",
+    desc: "오늘의 모험섬과 진행중인 이벤트를 확인합니다.",
   },
   {
-    title: "공략집",
-    desc: "레이드 / 내실 / 업적 공략으로 이동합니다.",
+    title: "공략 바로가기",
+    desc: "레이드, 내실, 업적 공략으로 이동합니다.",
   },
 ];
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-zinc-950 text-white p-10">
+    <section className="p-10">
       <div className="mb-10">
-        <h1 className="text-5xl font-bold mb-3">오늘도 대환장</h1>
-
-        <p className="text-zinc-400">
-          로스트아크 길드 통합 관리 플랫폼
+        <h2 className="text-4xl font-bold">메인</h2>
+        <p className="mt-3 text-zinc-400">
+          길드원들이 필요한 정보를 가볍게 확인하는 첫 화면입니다.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
         {cards.map((card) => (
           <div
             key={card.title}
             className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6"
           >
-            <h2 className="text-xl font-semibold mb-2">
-              {card.title}
-            </h2>
-
-            <p className="text-sm text-zinc-400">
-              {card.desc}
-            </p>
+            <h3 className="text-xl font-semibold">{card.title}</h3>
+            <p className="mt-2 text-sm text-zinc-400">{card.desc}</p>
           </div>
         ))}
       </div>
-    </main>
+    </section>
   );
 }
