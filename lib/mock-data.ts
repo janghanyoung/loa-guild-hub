@@ -1,3 +1,51 @@
+export const raidApplications = [
+  {
+    id: 1,
+    raidName: "하드 에기르",
+    difficulty: "Hard",
+    time: "오늘 21:00",
+    capacity: 8,
+    applicants: [
+      {
+        characterName: "파이썬을쓰는자",
+        owner: "파이썬을쓰는자",
+        job: "도화가",
+        itemLevel: "1720",
+        role: "서폿",
+        mastery: "반숙",
+        memo: "1~2관 가능",
+      },
+      {
+        characterName: "감자칩도둑",
+        owner: "감자칩도둑",
+        job: "소울이터",
+        itemLevel: "1710",
+        role: "딜러",
+        mastery: "숙련",
+        memo: "",
+      },
+    ],
+  },
+  {
+    id: 2,
+    raidName: "노말 카멘",
+    difficulty: "Normal",
+    time: "오늘 22:00",
+    capacity: 8,
+    applicants: [
+      {
+        characterName: "파이썬부캐1",
+        owner: "파이썬을쓰는자",
+        job: "브레이커",
+        itemLevel: "1690",
+        role: "딜러",
+        mastery: "트라이",
+        memo: "시간 맞으면 가능",
+      },
+    ],
+  },
+];
+
 export const expeditions = [
   {
     owner: "파이썬을쓰는자",
