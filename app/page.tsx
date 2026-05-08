@@ -1,5 +1,11 @@
+import EventCard from "@/components/event/EventCard";
 import NoticeCard from "@/components/notice/NoticeCard";
-import { notices, raidApplications } from "@/lib/mock-data";
+import {
+  islandEvents,
+  loaEvents,
+  notices,
+  raidApplications,
+} from "@/lib/mock-data";
 
 export default function HomePage() {
   const pinnedNotices = notices.filter((notice) => notice.pinned);
@@ -54,6 +60,38 @@ export default function HomePage() {
                   {raid.difficulty} · {raid.time}
                 </p>
               </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-10 grid grid-cols-1 gap-5 xl:grid-cols-2">
+        <div>
+          <h2 className="mb-5 text-2xl font-semibold">오늘의 모험섬</h2>
+
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            {islandEvents.map((island) => (
+              <EventCard
+                key={island.id}
+                title={island.name}
+                subtitle={`${island.type} · ${island.time}`}
+                description={`${island.reward} · ${island.note}`}
+              />
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h2 className="mb-5 text-2xl font-semibold">진행중 이벤트</h2>
+
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            {loaEvents.map((event) => (
+              <EventCard
+                key={event.id}
+                title={event.title}
+                subtitle={event.period}
+                description={event.reward}
+              />
             ))}
           </div>
         </div>

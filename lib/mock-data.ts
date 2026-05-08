@@ -1,3 +1,38 @@
+export const islandEvents = [
+  {
+    id: "island-001",
+    name: "메데이아",
+    type: "모험섬",
+    time: "11:00 / 19:00 / 23:00",
+    reward: "골드 / 카드 / 실링",
+    note: "PVP 섬",
+  },
+  {
+    id: "island-002",
+    name: "블루홀 섬",
+    type: "모험섬",
+    time: "13:00 / 21:00",
+    reward: "룬 / 카드 / 골드",
+    note: "보스 처치",
+  },
+];
+
+export const loaEvents = [
+  {
+    id: "event-001",
+    title: "핫타임 이벤트",
+    period: "2026-05-08 ~ 2026-05-15",
+    reward: "재련 재료 / 실링",
+  },
+  {
+    id: "event-002",
+    title: "출석 이벤트",
+    period: "진행중",
+    reward: "카드팩 / 배틀 아이템",
+  },
+];
+
+
 export const notices = [
   {
     id: "notice-001",
