@@ -1,3 +1,55 @@
+
+export const collectibleGuides = [
+  {
+    id: "mokoko",
+    name: "모코코",
+    total: 1270,
+    category: "수집형 포인트",
+    description: "전 대륙과 섬에 흩어진 모코코 씨앗 수집 현황입니다.",
+    guideId: "mokoko-basics",
+  },
+  {
+    id: "ignea",
+    name: "이그네아의 징표",
+    total: 15,
+    category: "모험의 서",
+    description: "대륙별 모험의 서 100% 달성 보상입니다.",
+    guideId: "ignea-route",
+  },
+  {
+    id: "giants-heart",
+    name: "거인의 심장",
+    total: 15,
+    category: "수집형 포인트",
+    description: "퀘스트, 호감도, 에포나 등을 통해 획득하는 수집 요소입니다.",
+    guideId: null,
+  },
+  {
+    id: "masterpiece",
+    name: "위대한 미술품",
+    total: 64,
+    category: "수집형 포인트",
+    description: "내실 보상과 각종 콘텐츠를 통해 수집하는 항목입니다.",
+    guideId: null,
+  },
+  {
+    id: "orpheus-star",
+    name: "오르페우스의 별",
+    total: 9,
+    category: "수집형 포인트",
+    description: "보스, 에포나, 교환 등을 통해 획득하는 고급 수집 요소입니다.",
+    guideId: null,
+  },
+  {
+    id: "world-tree-leaf",
+    name: "세계수의 잎",
+    total: 75,
+    category: "생활",
+    description: "생활 콘텐츠를 통해 획득하는 수집 요소입니다.",
+    guideId: null,
+  },
+];
+
 export const achievements = [
   {
     id: "hidden-001",
