@@ -1,3 +1,27 @@
+export const raidClearRecords = [
+  {
+    id: "clear-001",
+    raidName: "노말 카멘",
+    difficulty: "Normal",
+    clearedAt: "2026-05-07",
+    participants: [
+      "파이썬을쓰는자",
+      "파이썬부캐1",
+      "감자칩도둑",
+    ],
+  },
+  {
+    id: "clear-002",
+    raidName: "하드 베히모스",
+    difficulty: "Hard",
+    clearedAt: "2026-05-06",
+    participants: [
+      "감자칩도둑",
+      "오늘도대환장",
+    ],
+  },
+];
+
 export const islandEvents = [
   {
     id: "island-001",

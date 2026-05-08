@@ -1,6 +1,11 @@
 import RaidApplicationCard from "@/components/raid/RaidApplicationCard";
+import RaidClearRecordCard from "@/components/raid/RaidClearRecordCard";
 import RaidGuideCard from "@/components/raid/RaidGuideCard";
-import { raidApplications, raidGuides } from "@/lib/mock-data";
+import {
+  raidApplications,
+  raidClearRecords,
+  raidGuides,
+} from "@/lib/mock-data";
 
 export default function RaidsPage() {
   return (
@@ -9,7 +14,7 @@ export default function RaidsPage() {
         <h1 className="text-4xl font-bold">레이드</h1>
 
         <p className="mt-3 text-zinc-400">
-          레이드 신청 현황과 레이드별 공략을 확인합니다.
+          레이드 신청 현황, 이번 주 클리어 기록, 레이드별 공략을 확인합니다.
         </p>
       </div>
 
@@ -25,6 +30,24 @@ export default function RaidsPage() {
               time={raid.time}
               capacity={raid.capacity}
               applicants={raid.applicants}
+            />
+          ))}
+        </div>
+      </div>
+
+      <div className="mb-12">
+        <h2 className="mb-5 text-2xl font-semibold">
+          이번 주 길드 클리어 기록
+        </h2>
+
+        <div className="grid grid-cols-1 gap-5 xl:grid-cols-2">
+          {raidClearRecords.map((record) => (
+            <RaidClearRecordCard
+              key={record.id}
+              raidName={record.raidName}
+              difficulty={record.difficulty}
+              clearedAt={record.clearedAt}
+              participants={record.participants}
             />
           ))}
         </div>
