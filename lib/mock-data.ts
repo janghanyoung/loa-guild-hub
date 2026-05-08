@@ -1,3 +1,48 @@
+export const raidGuides = [
+  {
+    id: "aegir-hard",
+    name: "하드 에기르",
+    category: "카제로스 레이드",
+    difficulty: "Hard",
+    gates: [
+      {
+        gate: "1관문",
+        title: "1관문 핵심 기믹",
+        summary: "주시, 장판 유도, 파티별 산개 위치를 정리합니다.",
+      },
+      {
+        gate: "2관문",
+        title: "2관문 핵심 기믹",
+        summary: "무력화, 카운터, 즉사 패턴 대응을 정리합니다.",
+      },
+    ],
+  },
+  {
+    id: "kamen-normal",
+    name: "노말 카멘",
+    category: "군단장 레이드",
+    difficulty: "Normal",
+    gates: [
+      {
+        gate: "1관문",
+        title: "1관문 기본 흐름",
+        summary: "초반 패턴과 주요 전멸기 대응을 정리합니다.",
+      },
+      {
+        gate: "2관문",
+        title: "2관문 기믹 정리",
+        summary: "분신, 안전지대, 파티별 자리 배치를 정리합니다.",
+      },
+      {
+        gate: "3관문",
+        title: "3관문 핵심 패턴",
+        summary: "격돌, 검기, 낙사 위험 구간을 정리합니다.",
+      },
+    ],
+  },
+];
+
+
 export const raidApplications = [
   {
     id: 1,

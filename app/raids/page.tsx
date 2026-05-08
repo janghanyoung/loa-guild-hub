@@ -1,5 +1,6 @@
 import RaidApplicationCard from "@/components/raid/RaidApplicationCard";
-import { raidApplications } from "@/lib/mock-data";
+import RaidGuideCard from "@/components/raid/RaidGuideCard";
+import { raidApplications, raidGuides } from "@/lib/mock-data";
 
 export default function RaidsPage() {
   return (
@@ -8,21 +9,42 @@ export default function RaidsPage() {
         <h1 className="text-4xl font-bold">레이드</h1>
 
         <p className="mt-3 text-zinc-400">
-          레이드 신청 현황과 이번 주 진행 상황을 확인합니다.
+          레이드 신청 현황과 레이드별 공략을 확인합니다.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-5 xl:grid-cols-2">
-        {raidApplications.map((raid) => (
-          <RaidApplicationCard
-            key={raid.id}
-            raidName={raid.raidName}
-            difficulty={raid.difficulty}
-            time={raid.time}
-            capacity={raid.capacity}
-            applicants={raid.applicants}
-          />
-        ))}
+      <div className="mb-12">
+        <h2 className="mb-5 text-2xl font-semibold">신청 현황</h2>
+
+        <div className="grid grid-cols-1 gap-5 xl:grid-cols-2">
+          {raidApplications.map((raid) => (
+            <RaidApplicationCard
+              key={raid.id}
+              raidName={raid.raidName}
+              difficulty={raid.difficulty}
+              time={raid.time}
+              capacity={raid.capacity}
+              applicants={raid.applicants}
+            />
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h2 className="mb-5 text-2xl font-semibold">레이드 공략</h2>
+
+        <div className="grid grid-cols-1 gap-5 xl:grid-cols-2">
+          {raidGuides.map((guide) => (
+            <RaidGuideCard
+              key={guide.id}
+              id={guide.id}
+              name={guide.name}
+              category={guide.category}
+              difficulty={guide.difficulty}
+              gates={guide.gates}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
