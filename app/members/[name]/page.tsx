@@ -1,5 +1,6 @@
 import CharacterCard from "@/components/member/CharacterCard";
 import CollectibleSummary from "@/components/member/CollectibleSummary";
+import WeeklyRaidSummary from "@/components/member/WeeklyRaidSummary";
 import { expeditions } from "@/lib/mock-data";
 
 type MemberDetailPageProps = {
@@ -34,12 +35,13 @@ export default async function MemberDetailPage({
         <h1 className="mt-2 text-4xl font-bold">{decodedName}</h1>
 
         <p className="mt-3 text-zinc-400">
-          원정대 캐릭터와 내실 진행도를 확인합니다.
+          원정대 캐릭터, 내실, 주간 레이드 현황을 확인합니다.
         </p>
       </div>
 
-      <div className="mb-8">
+      <div className="mb-8 grid grid-cols-1 gap-5 xl:grid-cols-2">
         <CollectibleSummary items={expedition.collectibles} />
+        <WeeklyRaidSummary characters={expedition.characters} />
       </div>
 
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -50,7 +52,7 @@ export default async function MemberDetailPage({
             job={character.job}
             itemLevel={character.itemLevel}
             combatPower={character.combatPower}
-            weeklyGold={character.weeklyGold}
+            weeklyGold={character.weeklyGold.toLocaleString()}
           />
         ))}
       </div>
