@@ -1,3 +1,40 @@
+export const raidRecommendations = [
+  {
+    owner: "파이썬을쓰는자",
+    characterName: "파이썬을쓰는자",
+    itemLevel: "1720",
+    recommendedRaids: [
+      {
+        raidName: "하드 에기르",
+        reason: "입장 가능 · 이번 주 미클리어 · 모집중",
+        priority: "추천",
+      },
+      {
+        raidName: "하드 베히모스",
+        reason: "입장 가능 · 이번 주 미클리어",
+        priority: "가능",
+      },
+    ],
+  },
+  {
+    owner: "파이썬을쓰는자",
+    characterName: "파이썬부캐1",
+    itemLevel: "1690",
+    recommendedRaids: [
+      {
+        raidName: "노말 에기르",
+        reason: "입장 가능 · 이번 주 미클리어",
+        priority: "추천",
+      },
+      {
+        raidName: "노말 카멘",
+        reason: "입장 가능 · 모집중",
+        priority: "가능",
+      },
+    ],
+  },
+];
+
 export const raidClearRecords = [
   {
     id: "clear-001",
