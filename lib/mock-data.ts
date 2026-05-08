@@ -1,3 +1,31 @@
+export const notices = [
+  {
+    id: "notice-001",
+    title: "이번 주 레이드 일정 안내",
+    category: "레이드",
+    date: "2026-05-08",
+    pinned: true,
+    summary: "이번 주 하드 에기르와 노말 카멘 모집 일정을 확인해 주세요.",
+  },
+  {
+    id: "notice-002",
+    title: "길드 공략집 작성 안내",
+    category: "공략",
+    date: "2026-05-07",
+    pinned: false,
+    summary: "내실, 업적, 레이드 공략은 공략집 메뉴에서 순차적으로 정리합니다.",
+  },
+  {
+    id: "notice-003",
+    title: "신규 길드원 환영",
+    category: "길드",
+    date: "2026-05-06",
+    pinned: false,
+    summary: "새로 가입한 길드원은 길드원 페이지에서 원정대 정보를 확인할 수 있습니다.",
+  },
+];
+
+
 
 export const collectibleGuides = [
   {

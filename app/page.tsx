@@ -1,29 +1,10 @@
-const notices = [
-  "이번 주 하드 에기르 공대 모집중",
-  "디스코드 공지 확인 바랍니다",
-  "신규 길드원 가입 환영",
-];
-
-const raids = [
-  {
-    title: "하드 에기르",
-    status: "6 / 8",
-    time: "오늘 21:00",
-  },
-  {
-    title: "노말 카멘",
-    status: "4 / 8",
-    time: "오늘 22:00",
-  },
-];
-
-const events = [
-  "메데이아",
-  "블루홀 섬",
-  "핫타임 이벤트 진행중",
-];
+import NoticeCard from "@/components/notice/NoticeCard";
+import { notices, raidApplications } from "@/lib/mock-data";
 
 export default function HomePage() {
+  const pinnedNotices = notices.filter((notice) => notice.pinned);
+  const recentNotices = notices.filter((notice) => !notice.pinned).slice(0, 2);
+
   return (
     <section className="p-10">
       <div className="mb-10">
@@ -35,67 +16,43 @@ export default function HomePage() {
       </div>
 
       <div className="grid grid-cols-1 gap-5 xl:grid-cols-3">
-        {/* 공지사항 */}
-        <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
-          <h2 className="mb-5 text-2xl font-semibold">
-            공지사항
-          </h2>
+        <div className="xl:col-span-2">
+          <h2 className="mb-5 text-2xl font-semibold">공지사항</h2>
 
-          <div className="space-y-3">
-            {notices.map((notice) => (
-              <div
-                key={notice}
-                className="rounded-xl bg-zinc-800 px-4 py-3 text-sm text-zinc-300"
-              >
-                {notice}
-              </div>
+          <div className="space-y-4">
+            {[...pinnedNotices, ...recentNotices].map((notice) => (
+              <NoticeCard
+                key={notice.id}
+                title={notice.title}
+                category={notice.category}
+                date={notice.date}
+                pinned={notice.pinned}
+                summary={notice.summary}
+              />
             ))}
           </div>
         </div>
 
-        {/* 오늘의 레이드 */}
-        <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
-          <h2 className="mb-5 text-2xl font-semibold">
-            오늘의 레이드
-          </h2>
+        <div>
+          <h2 className="mb-5 text-2xl font-semibold">모집중 레이드</h2>
 
           <div className="space-y-4">
-            {raids.map((raid) => (
+            {raidApplications.map((raid) => (
               <div
-                key={raid.title}
-                className="rounded-xl border border-zinc-800 bg-zinc-950 p-4"
+                key={raid.id}
+                className="rounded-2xl border border-zinc-800 bg-zinc-900 p-5"
               >
-                <div className="flex items-center justify-between">
-                  <h3 className="font-semibold">
-                    {raid.title}
-                  </h3>
+                <div className="mb-3 flex items-center justify-between">
+                  <h3 className="font-semibold">{raid.raidName}</h3>
 
-                  <span className="text-sm text-emerald-400">
-                    {raid.status}
+                  <span className="text-sm text-zinc-400">
+                    {raid.applicants.length} / {raid.capacity}
                   </span>
                 </div>
 
-                <p className="mt-2 text-sm text-zinc-400">
-                  {raid.time}
+                <p className="text-sm text-zinc-500">
+                  {raid.difficulty} · {raid.time}
                 </p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* 모험섬 / 이벤트 */}
-        <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
-          <h2 className="mb-5 text-2xl font-semibold">
-            모험섬 / 이벤트
-          </h2>
-
-          <div className="space-y-3">
-            {events.map((event) => (
-              <div
-                key={event}
-                className="rounded-xl bg-zinc-800 px-4 py-3 text-sm text-zinc-300"
-              >
-                {event}
               </div>
             ))}
           </div>
