@@ -1,3 +1,41 @@
+export const achievements = [
+  {
+    id: "hidden-001",
+    name: "수상한 발자국",
+    category: "히든",
+    area: "루테란 동부",
+    condition: "특정 NPC와 대화 후 숨겨진 오브젝트 조사",
+    reward: "업적 점수 10",
+    difficulty: "쉬움",
+    hasGuide: true,
+    guideId: "hidden-achievement-start",
+  },
+  {
+    id: "hidden-002",
+    name: "기억을 걷는 자",
+    category: "히든",
+    area: "로헨델",
+    condition: "선행 퀘스트 완료 후 특정 위치 방문",
+    reward: "업적 점수 20",
+    difficulty: "보통",
+    hasGuide: true,
+    guideId: "hidden-achievement-start",
+  },
+  {
+    id: "normal-001",
+    name: "모험의 시작",
+    category: "일반",
+    area: "전 지역",
+    condition: "모험의 서 첫 항목 등록",
+    reward: "업적 점수 5",
+    difficulty: "쉬움",
+    hasGuide: false,
+    guideId: null,
+  },
+];
+
+
+
 export const raidGuides = [
   {
     id: "aegir-hard",
