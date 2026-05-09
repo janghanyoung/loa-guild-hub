@@ -221,6 +221,40 @@ export const achievements = [
 
 
 
+
+export const guidePosts = [
+  {
+    id: "mokoko-guide",
+    title: "모코코 수집 가이드",
+    category: "내실",
+    type: "수집",
+    difficulty: "쉬움",
+    estimatedTime: "30분~",
+    reward: "모코코 보상",
+    summary: "대륙별 모코코 수집 동선과 놓치기 쉬운 위치를 정리합니다.",
+  },
+  {
+    id: "ignea-guide",
+    title: "이그네아의 징표 가이드",
+    category: "내실",
+    type: "모험의 서",
+    difficulty: "어려움",
+    estimatedTime: "장기 진행",
+    reward: "이그네아의 징표 보상",
+    summary: "모험의 서 100% 달성을 위한 우선순위와 필요 재료를 정리합니다.",
+  },
+  {
+    id: "hidden-achievement-guide",
+    title: "히든 업적 공략",
+    category: "업적",
+    type: "히든",
+    difficulty: "보통",
+    estimatedTime: "업적별 상이",
+    reward: "업적 점수 / 칭호",
+    summary: "숨겨진 조건으로 달성하는 업적과 관련 공략을 정리합니다.",
+  },
+];
+
 export const raidGuides = [
   {
     id: "aegir-hard",
