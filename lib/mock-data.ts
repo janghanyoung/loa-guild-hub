@@ -40,6 +40,31 @@ export const raidClearRecords = [
   },
 ];
 
+export const achievements = [
+  {
+    id: "achievement-1",
+    name: "모코코 수집가",
+    category: "수집",
+    area: "전 대륙",
+    condition: "모코코 씨앗을 일정 수량 이상 수집합니다.",
+    reward: "칭호 / 수집 포인트",
+    difficulty: "보통",
+    hasGuide: true,
+    guideId: "mokoko",
+  },
+  {
+    id: "achievement-2",
+    name: "레이드 숙련자",
+    category: "레이드",
+    area: "군단장 레이드",
+    condition: "길드 레이드 클리어 기록을 누적합니다.",
+    reward: "길드 내 기록",
+    difficulty: "어려움",
+    hasGuide: false,
+  },
+];
+
+
 export const raidGuides = [
   {
     id: "kazeros",
