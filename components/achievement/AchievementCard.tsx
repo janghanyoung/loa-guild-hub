@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-type AchievementCardProps = {
+type Props = {
   id: string;
   name: string;
   category: string;
@@ -9,7 +9,7 @@ type AchievementCardProps = {
   reward: string;
   difficulty: string;
   hasGuide: boolean;
-  guideId: string | null;
+  guideId?: string;
 };
 
 export default function AchievementCard({
@@ -22,42 +22,32 @@ export default function AchievementCard({
   difficulty,
   hasGuide,
   guideId,
-}: AchievementCardProps) {
+}: Props) {
   return (
-    <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
-      <div className="mb-5">
-        <p className="text-sm text-zinc-500">
-          {category} · {area}
-        </p>
-
-        <h2 className="mt-2 text-2xl font-semibold">{name}</h2>
-
-        <p className="mt-3 text-sm leading-6 text-zinc-400">{condition}</p>
+    <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-5">
+      <div className="mb-3 flex items-center justify-between gap-3">
+        <span className="text-xs text-zinc-500">{category}</span>
+        <span className="rounded-full bg-zinc-800 px-3 py-1 text-xs text-zinc-300">
+          {difficulty}
+        </span>
       </div>
 
-      <div className="mb-5 grid grid-cols-1 gap-2 text-sm">
-        <div className="flex justify-between rounded-xl bg-zinc-800 px-4 py-3">
-          <span className="text-zinc-500">난이도</span>
-          <span>{difficulty}</span>
-        </div>
+      <h2 className="text-xl font-semibold">{name}</h2>
+      <p className="mt-1 text-sm text-zinc-500">{area}</p>
 
-        <div className="flex justify-between rounded-xl bg-zinc-800 px-4 py-3">
-          <span className="text-zinc-500">보상</span>
-          <span>{reward}</span>
-        </div>
+      <p className="mt-4 text-sm leading-6 text-zinc-400">{condition}</p>
+
+      <div className="mt-4 rounded-xl bg-zinc-800 px-4 py-3 text-sm">
+        보상: {reward}
       </div>
 
-      {hasGuide && guideId ? (
+      {hasGuide && (
         <Link
-          href={`/guides/${guideId}`}
-          className="block rounded-xl bg-zinc-100 px-4 py-3 text-center text-sm font-semibold text-zinc-950"
+          href={`/achievements/${guideId ?? id}`}
+          className="mt-4 inline-block text-sm font-semibold text-zinc-100 underline"
         >
-          연결된 공략 보기
+          공략 보기
         </Link>
-      ) : (
-        <div className="rounded-xl bg-zinc-800 px-4 py-3 text-center text-sm text-zinc-500">
-          연결된 공략 없음
-        </div>
       )}
     </div>
   );
